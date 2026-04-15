@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Study Buddy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <h1>AI Study Buddy</h1>
+        <p>Your personal study companion with smart reminders and quick review cards.</p>
+      </div>
+      <button id="themeToggle" class="btn btn-secondary" aria-label="Toggle theme">
+        <span id="themeIcon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-card">
+      <div>
+        <h2>Focus better. Learn faster.</h2>
+        <p>Track your study sessions, review flashcards, and organize topics with an interactive frontend experience.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Study table" />
+    </section>
+
+    <section class="features-grid">
+      <article class="feature-card">
+        <h3>Review cards</h3>
+        <p>Create quick flashcards and test your memory instantly.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Study Timer</h3>
+        <p>Stay productive with a simple timer and focus mode.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Topic Planner</h3>
+        <p>Organize subjects, set goals, and mark completed items.</p>
+      </article>
+    </section>
+
+    <section class="interactive-panel">
+      <div class="panel-left">
+        <div class="panel-header">
+          <h3>Flashcards</h3>
+          <button id="addCardBtn" class="btn btn-primary">Add Card</button>
+        </div>
+        <div id="flashcardList" class="flashcard-list"></div>
+      </div>
+
+      <div class="panel-right">
+        <div class="panel-header">
+          <h3>Study Topics</h3>
+          <select id="topicFilter" class="select-filter">
+            <option value="all">All Topics</option>
+            <option value="math">Math</option>
+            <option value="science">Science</option>
+            <option value="language">Language</option>
+            <option value="history">History</option>
+          </select>
+        </div>
+        <ul id="topicList" class="topic-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h4>Add New Flashcard</h4>
+      <label>
+        Question
+        <input id="cardQuestion" type="text" placeholder="Enter a question" />
+      </label>
+      <label>
+        Answer
+        <input id="cardAnswer" type="text" placeholder="Enter the answer" />
+      </label>
+      <div class="modal-actions">
+        <button id="saveCardBtn" class="btn btn-primary">Save Card</button>
+        <button id="closeModalBtn" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
